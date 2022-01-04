@@ -5,7 +5,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:es": "eslint '**/*.{js,ts,tsx}'",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "lint:etc": "prettier '**/*.{json,yaml,md}' --check",
+    "lint:etc:fix": "prettier '**/*.{json,yaml,md}' --write",
+    "lint:style": "stylelint './**/*.{js,ts,tsx}'",
+    "lint:style:fix": "stylelint './**/*.{js,ts,tsx}' --fix"
   },
   "dependencies": {
     "next": "12.0.7",
@@ -13,10 +19,16 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@titicaca/eslint-config-triple": "^3.0.2",
     "@types/node": "17.0.7",
     "@types/react": "17.0.38",
-    "eslint": "8.6.0",
+    "eslint": "^8.6.0",
     "eslint-config-next": "12.0.7",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^8.2.2",
+    "stylelint": "^14.2.0",
     "typescript": "4.5.4"
   }
 }
