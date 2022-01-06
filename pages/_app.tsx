@@ -1,11 +1,9 @@
-import { ThemeProvider } from '@emotion/react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import GlobalStyle from '../styles/GlobalStyle'
-import theme from '../styles/theme'
 
-function myApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -15,13 +13,10 @@ function myApp({ Component, pageProps }: AppProps) {
       </Head>
       <main>
         <GlobalStyle />
-
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
+        <Component {...pageProps} />
       </main>
     </>
   )
 }
 
-export default myApp
+export default MyApp
