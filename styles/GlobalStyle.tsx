@@ -10,10 +10,12 @@ function globalStyles() {
 
         html,
         body {
+          vertical-align: baseline;
           min-width: 1200px;
           padding: 0;
           margin: 0;
-          vertical-align: baseline;
+          border: 0;
+          text-size-adjust: none;
         }
 
         * {

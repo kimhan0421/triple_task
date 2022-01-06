@@ -5,35 +5,36 @@ import AppDescription from '../components/AppDescription'
 import { GRAY70, GRAY100 } from '../styles/colors'
 
 const Self = styled.div`
-  margin: 0px auto;
   position: relative;
   width: 1040px;
+  margin: 0 auto;
 `
 
 const LogoWapper = styled.div`
-  background: url('/images/ic-triple.png') center no-repeat;
-  background-size: 400px 338px;
-  width: 400px;
-  height: 338px;
-  box-sizing: border-box;
-  color: ${GRAY70};
-  padding-top: 280px;
   position: absolute;
   top: 150px;
-  text-align: center;
+  background: url('/images/ic-triple.png') center no-repeat;
+  background-size: 400px 338px;
+  color: ${GRAY70};
   font-size: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 400px;
+  height: 338px;
+  padding-top: 280px;
 `
 
 const InformationWapper = styled.div`
-  margin-left: 623px;
   padding-top: 150px;
+  margin-left: 623px;
 `
 
 const InformationDiv = styled.div`
+  color: ${GRAY100};
   font-size: 36px;
   letter-spacing: -1px;
+  line-height: 1;
   margin-bottom: 20px;
-  color: ${GRAY100};
 `
 
 const InformationStrong = styled.span`

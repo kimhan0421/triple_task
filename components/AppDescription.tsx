@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
+
 import { GRAY80 } from '../styles/colors'
 
 const Self = styled.div`
-  margin: 50px 0px 140px 623px;
   font-size: 14px;
   font-weight: bold;
+  margin: 50px 0 140px 623px;
 `
 
 const PlayAwardWapper = styled.div`
@@ -13,20 +14,20 @@ const PlayAwardWapper = styled.div`
   background-size: 54px 54px;
   background-position: left top;
   background-repeat: no-repeat;
-  padding: 5px 0px 5px 62px;
+  padding: 5px 0 5px 62px;
   margin-right: 39px;
 `
 
 const DescriptionDiv = styled.div`
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: bold;
   color: ${GRAY80};
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
 `
 
 const AppSelectedWapper = styled(PlayAwardWapper)`
-  margin-right: 0px;
   background-image: url('/images/ic-app-store.png');
+  margin-right: 0;
 `
 
 function AppDescription() {
