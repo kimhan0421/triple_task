@@ -10,24 +10,11 @@ function globalStyles() {
 
         html,
         body {
-          background: #fff;
-          color: #fff;
+          width: 1040px;
           min-width: 1200px;
           padding: 0px;
           border: 0px;
           font: inherit;
-          vertical-align: baseline;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        button {
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
         }
 
         * {
