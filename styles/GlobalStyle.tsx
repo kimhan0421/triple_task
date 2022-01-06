@@ -10,11 +10,10 @@ function globalStyles() {
 
         html,
         body {
-          width: 1040px;
           min-width: 1200px;
-          padding: 0px;
-          border: 0px;
-          font: inherit;
+          padding: 0;
+          margin: 0;
+          vertical-align: baseline;
         }
 
         * {

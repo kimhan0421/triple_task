@@ -8,10 +8,7 @@ module.exports = createConfig({ type: 'frontend', allowedNames })
 const { extends: extendConfigs, overrides } = createConfig({ type: 'frontend' })
 
 module.exports = {
-  extends: [
-    ...extendConfigs,
-    // 확장할 규칙 이름...
-  ],
+  extends: [...extendConfigs],
   overrides: [...overrides],
   rules: {
     'react/react-in-jsx-scope': 'off',

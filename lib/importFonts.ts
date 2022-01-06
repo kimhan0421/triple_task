@@ -1,15 +1,13 @@
 const importSansSerif = `
 @font-face {
-  font-family: 'sans-serif';
+  font-family: 'SansSerif';
   src: url('/font/SansSerif.otf') format('truetype');;
-}
-`
+}`
 
 const importFonts = `
-  ${importSansSerif}
+${importSansSerif}
   html {
-    font-family: sans-serif;
-    font-display: swap;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 `
 
