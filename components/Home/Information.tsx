@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
+import React from 'react'
 
 import { GRAY100 } from '../../styles/colors'
-import { RisingProps } from '../common/animationInterface'
+import { RisingProps } from '../common/animation'
+import Count from '../common/Count'
 
 const Self = styled.div<RisingProps>`
   padding-top: 150px;
@@ -24,16 +26,28 @@ const InformationStrong = styled.span`
 `
 
 function Information({ opacityControl, transY }: RisingProps) {
+  const user = 350
+  const review = 21
+  const save = 650
   return (
     <Self opacityControl={opacityControl} transY={transY}>
       <InformationDiv>
-        <InformationStrong>700만 명</InformationStrong>의 여행자
+        <InformationStrong>
+          <Count targets={user} /> 명
+        </InformationStrong>
+        의 여행자
       </InformationDiv>
       <InformationDiv>
-        <InformationStrong>21만 개</InformationStrong>의 여행 리뷰
+        <InformationStrong>
+          <Count targets={review} /> 개
+        </InformationStrong>
+        의 여행 리뷰
       </InformationDiv>
       <InformationDiv>
-        <InformationStrong>650만 개</InformationStrong>의 저장
+        <InformationStrong>
+          <Count targets={save} /> 개
+        </InformationStrong>
+        의 저장
       </InformationDiv>
     </Self>
   )

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 import { GRAY70 } from '../../styles/colors'
-import { RisingProps } from '../common/animationInterface'
+import { RisingProps } from '../common/animation'
 
 const LogoWapper = styled.div<RisingProps>`
   position: absolute;

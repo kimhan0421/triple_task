@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 import { GRAY80 } from '../../styles/colors'
-import { RisingProps } from '../common/animationInterface'
+import { RisingProps } from '../common/animation'
 
 const Self = styled.div<RisingProps>`
   font-size: 14px;
