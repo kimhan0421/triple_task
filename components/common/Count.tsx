@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 
+import sleep from './sleep'
+
 const ContetnsSpan = styled.span`
   font-weight: bold;
 `
@@ -13,20 +15,15 @@ function Count({ targets }: CountProps) {
   const [num, setNum] = useState(0)
 
   useEffect(() => {
-    const duration = 800
-    const upartingDration = duration / 50
-    const allDuration = Math.floor(duration / upartingDration)
-
-    function sleep(delay: number): void {
-      const start = new Date().getTime()
-      // eslint-disable-next-line no-empty
-      while (new Date().getTime() < start + delay) {}
-    }
+    const SLEEP_TIME = 40
+    const DURATION_TIME = 900
+    const upartingDration = DURATION_TIME / 90
+    const allDuration = Math.floor(DURATION_TIME / upartingDration)
 
     function animationEaseInOut(time: number, cnt: number) {
-      if (cnt === 50) {
-        sleep(130)
-        return time
+      if (cnt >= 86) {
+        sleep(SLEEP_TIME)
+        return Math.pow(time, 1 - time * time)
       }
       return Math.pow(time, 1 - time * time)
     }
