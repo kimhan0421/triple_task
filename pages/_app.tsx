@@ -1,7 +1,9 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { ThemeProvider } from '@emotion/react'
 
 import GlobalStyle from '../styles/GlobalStyle'
+import theme from '../styles/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <main>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </main>
     </>
   )
