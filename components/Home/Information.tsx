@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import React from 'react'
 
-import { GRAY100 } from '../../styles/colors'
 import { RisingProps } from '../common/animation'
 import Count from '../common/Count'
 
@@ -14,7 +13,7 @@ const Self = styled.div<RisingProps>`
 `
 
 const InformationDiv = styled.div`
-  color: ${GRAY100};
+  color: ${(props) => props.theme.colors.gray100};
   font-size: 36px;
   letter-spacing: -1px;
   line-height: 1;
