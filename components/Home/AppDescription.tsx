@@ -1,11 +1,15 @@
 import styled from '@emotion/styled'
 
-import { GRAY80 } from '../styles/colors'
+import { GRAY80 } from '../../styles/colors'
+import { RisingProps } from '../common/animation'
 
-const Self = styled.div`
+const Self = styled.div<RisingProps>`
+  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   font-size: 14px;
   font-weight: bold;
   margin: 50px 0 140px 623px;
+  opacity: ${(props) => (props.opacityControl ? '1' : '0')};
+  transition: all 700ms ease-in-out 300ms;
 `
 
 const PlayAwardWapper = styled.div`
@@ -30,9 +34,9 @@ const AppSelectedWapper = styled(PlayAwardWapper)`
   margin-right: 0;
 `
 
-function AppDescription() {
+function AppDescription({ opacityControl, transY }: RisingProps) {
   return (
-    <Self>
+    <Self opacityControl={opacityControl} transY={transY}>
       <PlayAwardWapper>
         <DescriptionDiv>2018 구글 플레이스토어</DescriptionDiv>
         <DescriptionDiv>올해의 앱 최우수상 수상</DescriptionDiv>
