@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-import { GRAY80 } from '../../styles/colors'
 import { RisingProps } from '../common/animation'
 
 const Self = styled.div<RisingProps>`
@@ -23,7 +22,7 @@ const PlayAwardWapper = styled.div`
 `
 
 const DescriptionDiv = styled.div`
-  color: ${GRAY80};
+  color: ${(props) => props.theme.colors.gray80};
   font-size: 14px;
   font-weight: bold;
   line-height: 22px;
