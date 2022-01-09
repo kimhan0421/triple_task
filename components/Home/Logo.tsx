@@ -6,6 +6,7 @@ import { RisingProps } from '../common/animation'
 const LogoWapper = styled.div<RisingProps>`
   position: absolute;
   top: 150px;
+  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   background: url('/images/ic-triple.png') center no-repeat;
   background-size: 400px 338px;
   color: ${GRAY70};
@@ -16,7 +17,6 @@ const LogoWapper = styled.div<RisingProps>`
   height: 338px;
   padding-top: 280px;
   opacity: ${(props) => (props.opacityControl ? '1' : '0')};
-  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   transition: all 700ms ease-in-out 100ms;
 `
 

@@ -6,10 +6,10 @@ import { RisingProps } from '../common/animation'
 import Count from '../common/Count'
 
 const Self = styled.div<RisingProps>`
+  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   padding-top: 150px;
   margin-left: 623px;
   opacity: ${(props) => (props.opacityControl ? '1' : '0')};
-  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   transition: all 700ms ease-in-out 200ms;
 `
 

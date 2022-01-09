@@ -4,11 +4,11 @@ import { GRAY80 } from '../../styles/colors'
 import { RisingProps } from '../common/animation'
 
 const Self = styled.div<RisingProps>`
+  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   font-size: 14px;
   font-weight: bold;
   margin: 50px 0 140px 623px;
   opacity: ${(props) => (props.opacityControl ? '1' : '0')};
-  transform: translateY(${(props) => (props.transY ? '0px' : '12px')});
   transition: all 700ms ease-in-out 300ms;
 `
 
